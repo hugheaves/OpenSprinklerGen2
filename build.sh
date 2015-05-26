@@ -14,6 +14,8 @@ if [ "$1" == "demo" ]; then
 	g++ -o OpenSprinkler -DDEMO -m32 main.cpp OpenSprinkler.cpp program.cpp server.cpp utils.cpp weather.cpp gpio.cpp etherport.cpp
 elif [ "$1" == "osbo" ]; then
 	g++ -o OpenSprinkler -DOSBO main.cpp OpenSprinkler.cpp program.cpp server.cpp utils.cpp weather.cpp gpio.cpp etherport.cpp
+elif [ "$1" == "ospi_direct" ]; then
+	g++ -o OpenSprinkler -DOSPI -DDIRECT_IO -DENABLE_DEBUG main.cpp OpenSprinkler.cpp program.cpp server.cpp utils.cpp weather.cpp gpio.cpp etherport.cpp
 else
 	g++ -o OpenSprinkler -DOSPI main.cpp OpenSprinkler.cpp program.cpp server.cpp utils.cpp weather.cpp gpio.cpp etherport.cpp
 fi
